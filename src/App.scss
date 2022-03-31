@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 80vh;
+  span.title{
+    margin-top: 3em;
+    font-weight: bold;
+    color: hsl(183, 100%, 15%);
+  } 
+}
+

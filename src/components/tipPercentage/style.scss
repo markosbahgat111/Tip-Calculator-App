@@ -1,0 +1,72 @@
+.tip_percentage_container{
+  margin: 1em;
+  width: 100%;
+  color: hsl(186, 14%, 43%);
+  font-weight: bold;
+  
+
+}
+input{
+    width: 100px;
+    height: 40px;
+    margin: 0.2em 0.3em;
+    font-size: 20px;
+    font-weight: bold;
+}
+input#active{
+  background-color:hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+input[type=button]{
+    background-color: hsl(183, 100%, 15%);
+    color:white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+input[type=number]{
+    background-color: hsl(183, 100%, 15%);
+    color:white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    cursor:text;
+  -moz-appearance: textfield;
+  padding:10px;
+}
+
+input[value=Custom]{
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+}
+input[value="5%"]{
+  margin-top: 15px;
+}
+
+
+@media screen and (max-width:950px){
+  input{
+    width: 45%;
+    height: 45px;
+}
+}
