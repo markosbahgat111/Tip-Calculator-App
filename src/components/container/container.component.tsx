@@ -19,13 +19,13 @@ const Container: React.FC<Props> = () => {
         <div className='bill_container'>
             <div className='input_container'>
                 <label>Bill</label>
-                <input type="number" value={state.bill ? state.bill : ''} onChange={(e) => dispatch(appendTotalAmount(parseFloat(e.currentTarget.value)))}/>
+                <input type="number" min={0} value={state.bill ? state.bill : ''} onChange={(e) => dispatch(appendTotalAmount(parseFloat(e.currentTarget.value)))}/>
                   <img src={dollarIcon} alt="dollarIcon"/>
             </div>
             <TipPercentage/>
             <div className='input_container'>
                 <label>Number Of People</label>
-                <input type="number" value={state.numberOfPeople ? state.numberOfPeople : ''}  onChange={(e) => dispatch(appendNumberOfPeople(parseFloat(e.currentTarget.value)))}/>
+                <input type="number" min={0} value={state.numberOfPeople ? state.numberOfPeople : ''}  onChange={(e) => dispatch(appendNumberOfPeople(parseFloat(e.currentTarget.value)))}/>
                 <img src={personIcon} alt="personIcon"/>
             </div>
         </div>

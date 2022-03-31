@@ -1,19 +1,20 @@
 .total_container{
     position: relative;
     width: 400px;
-    height: 100%;
+    min-height: fit-content ;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: hsl(183, 100%, 15%);
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
     color: white;
     padding: 2em;
+    height: 50vh;
 }
 
 .tip_amount{
@@ -69,11 +70,15 @@ button[type=reset]{
     cursor: pointer;
     color: hsl(183, 100%, 15%);
 }
+button[type=reset]:hover{
+    background-color: hsl(185, 41%, 84%)
+}
 @media screen and (max-width:950px){
     .total_container{
         position: relative;
         width: 100%;
         margin-bottom: 1em;
+        height: 100%;
     }
     button[type=reset]{
         margin-top: 3em;

@@ -52,8 +52,11 @@ input[type=number] {
     cursor:text;
   -moz-appearance: textfield;
   padding:10px;
+  
 }
-
+input[type=number]:focus{
+  border: 2px solid hsl(172, 67%, 45%);
+}
 input[value=Custom]{
   background-color: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
@@ -63,7 +66,10 @@ input[value="5%"]{
   margin-top: 15px;
 }
 
-
+input[type=button]:hover{
+  background-color: hsl(185, 41%, 84%);
+  color:hsl(183, 100%, 15%);
+}
 @media screen and (max-width:950px){
   input{
     width: 45%;

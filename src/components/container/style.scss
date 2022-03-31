@@ -2,7 +2,7 @@
     width: 900px;
     margin: auto;
     background-color: white;
-    height: 50vh;
+    min-height: 50vh;
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
@@ -13,6 +13,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
+    height: fit-content;
 }
 
 .bill_container{

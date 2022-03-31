@@ -25,9 +25,19 @@ const tipSlice = createSlice({
     reducers: {
         appendPercentage: (state, action:PayloadAction<number>) => {
             state.tipPercentage = action.payload;
+            const { bill, numberOfPeople, tipPercentage } = state;
+            if (bill && numberOfPeople && tipPercentage) {
+                state.tipAmount = (bill / numberOfPeople) * (tipPercentage / 100);
+                state.total = (bill / numberOfPeople) + ((bill / numberOfPeople) * (tipPercentage / 100));
+            }
         },
         appendTotalAmount: (state, action:PayloadAction<number>) => {
             state.bill = action.payload;
+            const { bill, numberOfPeople, tipPercentage } = state;
+            if (bill && numberOfPeople && tipPercentage) {
+                state.tipAmount = (bill / numberOfPeople) * (tipPercentage / 100);
+                state.total = (bill / numberOfPeople) + ((bill / numberOfPeople) * (tipPercentage / 100));
+            }
         },
         resetValues: (state) => {
             state.bill = null;
@@ -41,18 +51,18 @@ const tipSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(appendNumberOfPeople, (state, action) => {
             state.numberOfPeople = action.payload;
-            const { bill, numberOfPeople, tipPercentage, tipAmount, total } = state;
-            console.log("bulkdfjas ouoiu");
-            console.log(current(state), action);
+            const { bill, numberOfPeople, tipPercentage } = state;
             if (bill && numberOfPeople && tipPercentage) {
                 state.tipAmount = (bill / numberOfPeople) * (tipPercentage / 100);
                 state.total = (bill / numberOfPeople) + ((bill / numberOfPeople) * (tipPercentage / 100));
-                
             }
-            console.log(current(state), action);
             
+        });
+        builder.addCase(appendTotalAmount, (state) => {
+            console.log("sufsdajklfdk");
             
         })
+
     }
 
 })

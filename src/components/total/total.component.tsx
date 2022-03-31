@@ -17,7 +17,7 @@ const Total = (props: Props) => {
                       <small>/person</small>
                     </span>
                     <strong>
-                        ${state.tipAmount ? Number((state.tipAmount).toFixed(2)) : " 0.0"}
+                        ${state.tipAmount ? Number((state.tipAmount).toFixed(2)) : "0.00"}
                     </strong>
                 </p>
           </div>
@@ -28,7 +28,7 @@ const Total = (props: Props) => {
                       <small>/person</small>
                     </span>
                     <strong>
-                        ${state.total ? Number((state.total).toFixed(2))  : " 0.0"}
+                        ${state.total ? Number((state.total).toFixed(2))  : "0.00"}
                     </strong>
                 </p>
           </div>
